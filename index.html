@@ -583,6 +583,16 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/custom.js"></script>
+        <script>
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
 
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+                bsCollapse.hide();
+                });
+            });
+        </script>
     </body>
 </html>
